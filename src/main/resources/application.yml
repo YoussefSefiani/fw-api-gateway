@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: fw-api-gateway
+
+ribbon:
+  ReadTimeout: 10000
+
+zuul:
+  routes:
+    user:
+      path: /api/user/**
+      url: https://fw-auth-service.herokuapp.com/api/user
+    auth:
+      path: /api/login/**
+      url: https://fw-auth-service.herokuapp.com/login
+  sensitiveHeaders: Cookie,Set-Cookie
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://fw-discovery-server.herokuapp.com/eureka/
+  instance:
+    hostname: fw-api-gateway.herokuapp.com
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+
+
