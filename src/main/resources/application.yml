@@ -23,5 +23,3 @@ eureka:
     hostname: fw-api-gateway.herokuapp.com
     secure-port-enabled: true
     non-secure-port-enabled: false
-
-
