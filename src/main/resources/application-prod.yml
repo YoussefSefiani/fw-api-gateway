@@ -29,6 +29,7 @@ eureka:
     hostname: ${DOMAIN_NAME}
     secure-port-enabled: true
     non-secure-port-enabled: false
+  password: ${USER_PASSWORD:password}
 
 app:
   services:
