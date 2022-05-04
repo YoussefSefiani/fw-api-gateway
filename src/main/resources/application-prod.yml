@@ -24,9 +24,9 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://fw-discovery-server.herokuapp.com/eureka/
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
   instance:
-    hostname: fw-api-gateway.herokuapp.com
+    hostname: ${DOMAIN_NAME}
     secure-port-enabled: true
     non-secure-port-enabled: false
 
