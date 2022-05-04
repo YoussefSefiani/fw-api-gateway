@@ -37,8 +37,10 @@ public class AccessFilter extends ZuulFilter {
         String requestURI = request.getRequestURI();
         String token = request.getHeader("Authorization");
         try {
+
             proxyService.check(token);
             return null;
+
         } catch (Exception e) {
             if (
                     token == null
