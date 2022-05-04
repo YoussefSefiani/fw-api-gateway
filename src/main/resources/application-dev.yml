@@ -1,0 +1,39 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: fw-api-gateway
+
+ribbon:
+  ReadTimeout: 10000
+
+zuul:
+  routes:
+    user:
+      path: /api/user/**
+      url: http://localhost:8080/api/user
+    auth:
+      path: /api/login/**
+      url: http://localhost:8080/login
+    influencer:
+      path: /api/influencer/**
+      url: http://localhost:8081/api/influencer
+    brand:
+      path: /api/brand/**
+      url: http://localhost:8081/api/brand
+  sensitiveHeaders: Cookie,Set-Cookie
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: fw-api-gateway.herokuapp.com
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+
+app:
+  services:
+    auth:
+      url: http://localhost:8080
