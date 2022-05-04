@@ -40,7 +40,6 @@ public class AccessFilter extends ZuulFilter {
 
             proxyService.check(token);
             return null;
-
         } catch (Exception e) {
             if (
                     token == null
