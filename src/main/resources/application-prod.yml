@@ -35,3 +35,7 @@ app:
   services:
     auth:
       url: https://fw-auth-service.herokuapp.com
+
+server:
+  error:
+    include-message: always
