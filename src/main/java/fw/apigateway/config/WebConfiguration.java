@@ -20,7 +20,8 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .exposedHeaders("*")
                 .allowedMethods("*")
                 .allowedHeaders("*")
-                .allowedOriginPatterns("*");
+                .allowedOriginPatterns("*")
+                .allowCredentials(false);
     }
 
     @Override
