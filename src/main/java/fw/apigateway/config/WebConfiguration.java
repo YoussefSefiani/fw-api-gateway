@@ -21,7 +21,6 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .exposedHeaders("*")
                 .allowedMethods("*")
                 .allowedHeaders("*");
-
     }
 
 }
