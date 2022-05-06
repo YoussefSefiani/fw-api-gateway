@@ -36,6 +36,7 @@ public class ApiGatewayApplication {
 		config.addAllowedMethod("POST");
 		config.addAllowedMethod("DELETE");
 		config.addAllowedMethod("PATCH");
+		config.addExposedHeader("Authorization");
 		source.registerCorsConfiguration("/**", config);
 		return new CorsFilter(source);
 	}
