@@ -24,6 +24,9 @@ zuul:
     brand:
       path: /api/brand/**
       url: http://localhost:8081/api/brand
+    offer:
+      path: /api/offer/**
+      url: http://localhost:8082/api/offer
   sensitiveHeaders: Cookie,Set-Cookie
 
 eureka:
