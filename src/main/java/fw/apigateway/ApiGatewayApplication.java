@@ -28,6 +28,8 @@ public class ApiGatewayApplication {
 		final CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true);
 		config.addAllowedOriginPattern("*");
+		config.addAllowedOriginPattern("http://localhost:4200/");
+		config.addAllowedOriginPattern("https://fw-front-end.herokuapp.com/");
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("OPTIONS");
 		config.addAllowedMethod("HEAD");
