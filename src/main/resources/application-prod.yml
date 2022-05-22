@@ -19,9 +19,9 @@ zuul:
     brand:
       path: /api/brand/**
       url: https://fw-profile-service.herokuapp.com/api/brand
-    offer:
-      path: /api/offer/**
-      url: https://fw-offer-service.herokuapp.com/api/offer
+    partnership:
+      path: /api/partnership/**
+      url: https://fw-partnership-service.herokuapp.com/api/partnership
   sensitiveHeaders: Cookie,Set-Cookie
 
 eureka:

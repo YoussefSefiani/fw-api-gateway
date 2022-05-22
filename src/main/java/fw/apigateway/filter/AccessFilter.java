@@ -46,7 +46,7 @@ public class AccessFilter extends ZuulFilter {
                             && !requestURI.equals("/api/user")
                             || requestURI.contains("/api/influencer")
                             || requestURI.contains("/api/brand")
-                            || requestURI.contains("/api/offer")
+                            || requestURI.contains("/api/partnership")
             ) {
                 ctx.setSendZuulResponse(false);
                 ctx.setResponseBody("Invalid token or no token");
