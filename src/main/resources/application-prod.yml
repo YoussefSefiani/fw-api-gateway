@@ -22,7 +22,7 @@ zuul:
     partnership:
       path: /api/partnership/**
       url: https://fw-partnership-service.herokuapp.com/api/partnership
-    partnership:
+    payment:
       path: /api/payment/**
       url: https://fw-payment-service.herokuapp.com/api/payment
   sensitiveHeaders: Cookie,Set-Cookie
