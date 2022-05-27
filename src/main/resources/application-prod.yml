@@ -28,6 +28,9 @@ zuul:
     rating:
       path: /api/rating/**
       url: https://fw-rating-service.herokuapp.com/api/rating
+    file:
+      path: /api/file/**
+      url: https://fw-file-service.herokuapp.com/api/file
   sensitiveHeaders: Cookie,Set-Cookie
 
 eureka:

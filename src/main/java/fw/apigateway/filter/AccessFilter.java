@@ -48,6 +48,8 @@ public class AccessFilter extends ZuulFilter {
                             || requestURI.contains("/api/brand")
                             || requestURI.contains("/api/partnership")
                             || requestURI.contains("/api/payment")
+                            || requestURI.contains("/api/rating")
+                            || requestURI.contains("/api/file")
             ) {
                 ctx.setSendZuulResponse(false);
                 ctx.setResponseBody("Invalid token or no token");
