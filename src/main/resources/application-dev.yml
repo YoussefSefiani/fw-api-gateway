@@ -24,6 +24,9 @@ zuul:
     brand:
       path: /api/brand/**
       url: http://localhost:8081/api/brand
+    profile:
+      path: /api/profile/**
+      url: http://localhost:8081/api/profile
     partnership:
       path: /api/partnership/**
       url: http://localhost:8082/api/partnership
