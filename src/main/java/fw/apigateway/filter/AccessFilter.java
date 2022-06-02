@@ -44,7 +44,6 @@ public class AccessFilter extends ZuulFilter {
                     token == null
                             && !requestURI.equals("/api/login")
                             && !requestURI.equals("/api/user")
-                            && !requestURI.equals("/api/user/email")
                             || requestURI.contains("/api/influencer")
                             || requestURI.contains("/api/brand")
                             || requestURI.contains("/api/partnership")
