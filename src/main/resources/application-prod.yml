@@ -34,6 +34,10 @@ zuul:
     file:
       path: /api/file/**
       url: https://fw-file-service.herokuapp.com/api/file
+    image:
+      path: /api/image/**
+      url: https://fw-file-service.herokuapp.com/api/image
+
   sensitiveHeaders: Cookie,Set-Cookie
 
 eureka:
