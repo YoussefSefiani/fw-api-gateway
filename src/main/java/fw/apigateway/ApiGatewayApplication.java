@@ -40,5 +40,4 @@ public class ApiGatewayApplication {
 		source.registerCorsConfiguration("/**", config);
 		return new CorsFilter(source);
 	}
-
 }
