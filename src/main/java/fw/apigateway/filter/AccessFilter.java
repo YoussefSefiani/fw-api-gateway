@@ -44,6 +44,7 @@ public class AccessFilter extends ZuulFilter {
                     token == null
                             && !requestURI.equals("/api/login")
                             && !requestURI.equals("/api/user")
+                            && !requestURI.equals("/api/ping")
                             && !requestURI.contains("/api/user/available")
                             && !requestURI.contains("/api/image")
                             && !requestURI.contains("/api/file")
