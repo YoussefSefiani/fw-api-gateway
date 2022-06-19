@@ -30,7 +30,6 @@ public class ZuulConfiguration {
 
     private enum LookupHandlerCallbackFilter implements CallbackFilter {
         INSTANCE;
-
         @Override
         public int accept(Method method) {
             if (METHOD.equals(method.getName())) {
