@@ -9,43 +9,43 @@ zuul:
   routes:
     user:
       path: /api/user/**
-      url: https://fw-auth-service.herokuapp.com/api/user
+      url: https://fw-auth-service.azurewebsites.net/api/user
     auth:
       path: /api/login/**
-      url: https://fw-auth-service.herokuapp.com/login
+      url: https://fw-auth-service.azurewebsites.net/login
     influencer:
       path: /api/influencer/**
-      url: https://fw-profile-service.herokuapp.com/api/influencer
+      url: https://fw-profile-service.azurewebsites.net/api/influencer
     brand:
       path: /api/brand/**
-      url: https://fw-profile-service.herokuapp.com/api/brand
+      url: https://fw-profile-service.azurewebsites.net/api/brand
     profile:
       path: /api/profile/**
-      url: https://fw-profile-service.herokuapp.com/api/profile
+      url: https://fw-profile-service.azurewebsites.net/api/profile
     partnership:
       path: /api/partnership/**
-      url: https://fw-partnership-service.herokuapp.com/api/partnership
+      url: https://fw-partnership-service.azurewebsites.net/api/partnership
     payment:
       path: /api/payment/**
-      url: https://fw-payment-service.herokuapp.com/api/payment
+      url: https://fw-payment-service.azurewebsites.net/api/payment
     rating:
       path: /api/rating/**
-      url: https://fw-rating-service.herokuapp.com/api/rating
+      url: https://fw-rating-service.azurewebsites.net/api/rating
     file:
       path: /api/file/**
-      url: https://fw-file-service.herokuapp.com/api/file
+      url: https://fw-file-service.azurewebsites.net/api/file
     image:
       path: /api/image/**
-      url: https://fw-file-service.herokuapp.com/api/image
+      url: https://fw-file-service.azurewebsites.net/api/image
 
   sensitiveHeaders: Cookie,Set-Cookie
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
+      defaultZone: https://fw-discovery-server.azurewebsites.net/eureka
   instance:
-    hostname: ${DOMAIN_NAME}
+    hostname: fw-api-gateway.azurewebsites.net
     secure-port-enabled: true
     non-secure-port-enabled: false
   password: ${USER_PASSWORD:password}
@@ -53,7 +53,7 @@ eureka:
 app:
   services:
     auth:
-      url: https://fw-auth-service.herokuapp.com
+      url: https://fw-auth-service.azurewebsites.net
 
 server:
   error:
