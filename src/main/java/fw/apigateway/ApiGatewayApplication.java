@@ -28,6 +28,7 @@ public class ApiGatewayApplication {
 		return "pong";
 	}
 
+
 	@Bean
 	public CorsFilter corsFilter() {
 		final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
